@@ -1,0 +1,36 @@
+'''
+BISMILLAHIR ROHMANIR ROHIM
+'''
+#simple calculator
+
+while True:
+    try:
+        a = float(input('enter first num:'))
+        op = input('please enter operator[+,-,*,/,%,^]:')
+        b = float(input('enter 2nd num:'))
+        if op == '+':
+            result = a+b
+        elif op == '-':
+            result = a-b
+        elif op == '*':
+            result = a*b
+        elif op == '/':
+            if(b!=0):
+                result = a/b
+            else:
+                result = 'undefined(division by zero)'
+        elif op == '%':
+            if(b!=0):
+                result = a%b
+            else:
+                result = 'undefined'
+        elif op == '^':
+            result = a**b
+        else:
+            print('please enter a valid operator!')
+            continue
+        print(a,op,b,'=',result)
+        break
+    except ValueError:
+        print('Invalid input! Please enter numbers only.')
+    
