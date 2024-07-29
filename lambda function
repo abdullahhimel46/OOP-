@@ -1,0 +1,27 @@
+'''
+***Normal function***
+def add(x,y):
+    return x+y
+
+print(add(2,3))
+
+***lambda function***
+
+lambda parameters: expression
+#square=lambda a: a*a
+add = lambda x,y : x+y
+print(add(2,3))
+
+'''
+
+def make_incrementor(n):
+    return lambda x: x + n
+
+# Create an incrementor function that adds 5 to its input
+inc_by_5 = make_incrementor(5)
+
+# Apply the incrementor function to the input 10
+result = inc_by_5(10) # add 10 with the make_incrementor function's returned value
+
+# Print the result
+print(result)  # Output: 15
