@@ -1,0 +1,9 @@
+#List Comprehensions
+numbers=[1,2,3,4,5]
+
+#using map()
+#squares=map(lambda a: a**2, numbers) 
+
+#[output_expression for element in list]
+squares=[number**2 for number in numbers]
+print(list(squares))
