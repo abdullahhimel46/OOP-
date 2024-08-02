@@ -1,0 +1,31 @@
+"""
+#list comprehension with if condition
+#Example-1:
+mountains = [
+    ['Makalu', 8485],
+    ['Lhotse', 8516],
+    ['Kanchendzonga', 8586],
+    ['K2', 8611],
+    ['Everest', 8848]
+]
+#[output_expression for element in list if condition]
+print([m for m in mountains if m[1] > 8600])
+"""
+#Example-2:
+numbers=range(1,21)
+#[output_expression for element in list if condition]
+result=[(x,'even' if x%2==0 else 'odd') for x in numbers if x%3==0]
+#A ternary conditional expression:'even' if x % 2 == 0 else 'odd';  
+#that evaluates to 'even' if the number is even, otherwise 'odd'.
+for i in result:
+    print(i)
+'''
+expected output:
+(3, 'odd')
+(6, 'even')
+(9, 'odd')
+(12, 'even')
+(15, 'odd')
+(18, 'even')
+'''
+
