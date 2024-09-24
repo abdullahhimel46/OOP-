@@ -28,10 +28,14 @@ from datetime import datetime
 def get_fiscal_year(date=None, fy_start_month=7): #July=7
     if date is None:
         date = datetime.now()
+    #yr=datetime.now().year
     if date.month < fy_start_month:
+    #if datetime.now().month < fy_yr_start:
         return date.year
+        #return yr
     else:
         return date.year + 1
+        #return yr+1
 
 # Example usage
 current_date = datetime(2024, 8, 1)
