@@ -1,0 +1,41 @@
+"""
+#A fiscal year (FY) is a 12-month period used by governments, businesses, 
+and other organizations.
+
+Standard Calendar Year:
+    |----------- Jan 2024 -----------|----------- Dec 2024 -----------|
+
+#U.S. Universities
+Fiscal Year (July 1, 2023 – June 30, 2024):
+    |----- Jul 2023 -----|----- Dec 2023 -----|----- Jun 2024 -----|
+         Start              Middle(6 months)              End
+
+#U.S. Government
+Fiscal Year (October 1, 2023 – September 30, 2024):
+    |----- October 2023 -----|----- Mar 2023 -----|----- Sep 2024 -----|
+            Start              Middle(6 months)              End
+
+#U.K. Government
+Fiscal Year (April 1, 2023 – March 31, 2024):
+    |----- April 2023 -----|----- Sep 2023 -----|----- March 2024 -----|
+            Start              Middle(6 months)              End
+
+"""
+
+
+from datetime import datetime
+
+def get_fiscal_year(date=None, fy_start_month=7): #July=7
+    if date is None:
+        date = datetime.now()
+    if date.month < fy_start_month:
+        return date.year
+    else:
+        return date.year + 1
+
+# Example usage
+current_date = datetime(2024, 8, 1)
+print(f"Date: {current_date.date()}")
+print(f"Fiscal Year (default July 1st start): FY{get_fiscal_year(current_date)}")
+print(f"Fiscal Year (October 1st start): FY{get_fiscal_year(current_date, fy_start_month=10)}")
+print(f"Fiscal Year (April 1st start): FY{get_fiscal_year(current_date, fy_start_month=4)}")
