@@ -1,6 +1,0 @@
-#post mortem of unpacking a tuple
-# Unpack a single tuple:
-employees = ("Alice", "HR", 60000)
-x,y,z=employees
-#the number of variable and the number of elements should be same.
-print(f"Name: {x}, Department: {y}, Salary: ${z}")

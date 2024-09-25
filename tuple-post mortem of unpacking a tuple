@@ -1,0 +1,64 @@
+#post mortem of unpacking a tuple
+# *** Unpack a single tuple ***
+print("*** Unpacking a tuple directly ***")
+employees = ("Alice", "HR", 60000)
+x,y,z=employees
+#the number of variable and the number of elements should be same.
+print(f"Name: {x}, Department: {y}, Salary: ${z}")
+
+# *** Using Asterisk(*) ***
+print("\n*** Using Asterisk *** ")
+'''
+# Main purpose: Assigning specific values and collect the remaining ones
+# If the number of variables is less than the number of values in a collection, you 
+can add an Asterisk(*z) to the variable name
+# Asterisk(*) allows to assign a portion of the elements from a collection to
+a specific variable
+# It allows to handle variable-length collections (means in sutuations where the exact 
+number of elements is unknown in a tuple, list, or other collections) or when you want
+to separate a few known values from a collection.
+# When (*) is useed in a variable assignment, it tells Python to collect multiple 
+remaining values into a list.
+'''
+#Example-1:
+print("\nExample-1:")
+fruits = ("apple", "banana", "cherry", "strawberry", "raspberry")
+x,y, *z=fruits
+print(x)
+print(y)
+print(z)
+
+# Upack *z
+print("\nUnpacking z: ")
+for x in z:
+    print(x)
+
+#Example-2:
+print("\nExample-2:")
+numbers = (1, 2, 3, 4, 5, 6)
+a, b, *c = numbers
+print(a)
+print(b)
+print(c)
+# a = 1, b = 2, c = [3, 4, 5, 6]
+#Here, a and b get the first two values, and c collects the rest into a list.
+
+#Example-3:
+print("\nExample-3:")
+numbers = (1, 2, 3, 4, 5, 6)
+a, *b, c = numbers
+print(a)
+print(b)
+print(c)
+# a = 1, b = [2, 3, 4, 5], c = 6
+#Here, a gets the first value, c gets the last value, and b collects everything in 
+# between into a list.
+
+#Example-4(with no remaining values):
+print("\nExample-4:")
+fruits = ("apple", "banana")
+x, y, *z = fruits
+
+print(x)  # "apple"
+print(y)  # "banana"
+print(z)  # []
