@@ -1,0 +1,22 @@
+#post mortem of unpacking a list
+# Unpack a single list:
+employees = ["Alice", "HR", 60000]
+"""
+for x, y, z in employees:
+#Python tries to unpack like this:
+"Alice" -> unpack into x, y, z (this fails, as "Alice" is a single string, 
+not three items)
+"""
+x,y,z=employees
+print(f"Name: {x}, Department: {y}, Salary: ${z}")
+
+# Unpack a list of one sub-list:
+employees = [["Alice", "HR", 60000]]
+for x, y, z in employees:
+  print(f"Name: {x}, Department: {y}, Salary: ${z}")
+#Python tries to unpack like this:["Alice", "HR", 60000] -> unpack into x, y, z 
+
+# Unpack a list of tuple:
+employees = [("Alice", "HR", 60000)]
+for x, y, z in employees:
+  print(f"Name: {x}, Department: {y}, Salary: ${z}")
