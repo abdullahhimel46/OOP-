@@ -53,8 +53,8 @@ print(rest)
 #Unpacking Nested Lists:
 #Example-5:
 print("\nExample-5:")
-digits=[1,[2,3],4]
-a,(b,c),d=digits
+nested_li=['Happy', [2,0,1]]
+a,(b,c,d)=nested_li
 print(a)
 print(b)
 print(c)
