@@ -1,0 +1,41 @@
+#post mortem of unpacking a list - 1
+
+""" *** Directly unpack a list *** """
+print("Directly unpacking a list: ")
+numbers=[1,2,3]
+a,b,c=numbers
+print(a)
+print(b)
+print(c)
+
+""" *** Using Asterisk(*) *** """
+#Example-1:
+print("\nExample-1:")
+numbers=[1,2,3,4,5,6,7,8]
+a,b,*c=numbers
+print(a)
+print(b)
+print(c)
+#Example-1:
+print("\nExample-1:")
+numbers=[1,2,3,4,5,6,7,8]
+a,b,*c=numbers
+print(a)
+print(b)
+print(c)
+
+#Example-2:
+print("\nExample-2:")
+numbers=[1,2,3,4,5,6,7,8]
+a,*b,c=numbers
+print(a)
+print(b)
+print(c)
+
+#Example-3:
+print("\nExample-3:")
+numbers=['Apple','Orange']
+a,b,*c=numbers
+print(a)
+print(b)
+print(c)
