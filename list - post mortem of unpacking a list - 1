@@ -34,8 +34,28 @@ print(c)
 
 #Example-3:
 print("\nExample-3:")
-numbers=['Apple','Orange']
-a,b,*c=numbers
+fruits=['Apple','Orange']
+a,b,*c=fruits
 print(a)
 print(b)
 print(c)
+
+#Ignoring Certain Values:
+#Example-4:
+print("\nExample-4:")
+numbers=[1,2,3,4,5,6,7,8,9]
+a,_,c,*rest=numbers
+print(a)
+print("Value of b is ignored.")
+print(c)
+print(rest)
+
+#Unpacking Nested Lists:
+#Example-5:
+print("\nExample-5:")
+digits=[1,[2,3],4]
+a,(b,c),d=digits
+print(a)
+print(b)
+print(c)
+print(d)
