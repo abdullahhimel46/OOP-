@@ -20,21 +20,9 @@ to separate a few known values from a collection.
 # When (*) is useed in a variable assignment, it tells Python to collect multiple 
 remaining values into a list.
 '''
+
 #Example-1:
 print("\nExample-1:")
-fruits = ("apple", "banana", "cherry", "strawberry", "raspberry")
-x,y, *z=fruits
-print(x)
-print(y)
-print(z)
-
-# Upack *z
-print("\nUnpacking z: ")
-for x in z:
-    print(x)
-
-#Example-2:
-print("\nExample-2:")
 numbers = (1, 2, 3, 4, 5, 6)
 a, b, *c = numbers
 print(a)
@@ -43,8 +31,13 @@ print(c)
 # a = 1, b = 2, c = [3, 4, 5, 6]
 #Here, a and b get the first two values, and c collects the rest into a list.
 
-#Example-3:
-print("\nExample-3:")
+# Upack *c
+print("\nUnpacking c: ")
+for x in c:
+    print(x,end=' ')
+
+#Example-2:
+print("\n\nExample-2:")
 numbers = (1, 2, 3, 4, 5, 6)
 a, *b, c = numbers
 print(a)
@@ -54,11 +47,43 @@ print(c)
 #Here, a gets the first value, c gets the last value, and b collects everything in 
 # between into a list.
 
-#Example-4(with no remaining values):
-print("\nExample-4:")
+#Example-3(with no remaining values):
+print("\nExample-3:")
 fruits = ("apple", "banana")
 x, y, *z = fruits
 
 print(x)  # "apple"
 print(y)  # "banana"
 print(z)  # []
+
+#Ignoring Certain Values:
+#Example-4:
+print("\nExample-4:")
+numbers=(1,2,3,4,5,6,7,8,9)
+a,_,c,*rest=numbers
+print(a)
+print("Value of b is ignored.")
+print(c)
+print(rest)
+
+
+# nested tuple
+#Example-5:
+print("\nExample-5:")
+my_tuple = ('mouse', [8, 4], (1, 2))
+a,(b,c),(d,e)=my_tuple
+print(a)
+print(b)
+print(c)
+print(d)
+print(e)
+
+# tuple can be created without parentheses
+#Example-6:
+print("\nExample-6:")
+my_tuple = 3, 4.6, 'dog'
+print(type(my_tuple))
+a,b,c=my_tuple
+print(a)
+print(b)
+print(c)
