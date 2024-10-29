@@ -1,0 +1,14 @@
+#Create a class and display the namespace of the said class
+# A namespace is a collection of names (like variables, methods, or attributes) 
+# that belong to a specific class.
+class Student:
+    id=101
+    name='Himel'
+    dept='CSE'
+
+    def set_name(self,name):
+        pass
+
+for name in Student.__dict__:
+# Python has a special attribute called __dict__ that stores everything in a class.
+    print(name)
