@@ -1,0 +1,16 @@
+# method overloading
+"""
+method overloading: multiple method with same name having 
+different parameter in a class.
+"""
+
+class Calculator:
+    def multiplex(self,a,*args):
+        mul=a
+        for x in args:
+            mul*=x
+
+        print(mul)
+
+obj=Calculator()
+obj.multiplex(1,2,2,2,2)
